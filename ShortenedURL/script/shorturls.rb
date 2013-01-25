@@ -1,7 +1,10 @@
 def run
+  puts " Welcome to gra.pe! ".center(80, ' ').white.on_green
+  puts
   while true
-    puts "What do you want to do?"
-    puts "(s)horten a url, (g)o to a shortened url, (v)iew stats, (q)uit"
+    puts "What do you want to do?".green
+    print "(s)horten a url, (g)o to a shortened url, (v)iew stats,"
+    print " (l)ist links, (q)uit\n"
     print "> "
     case gets.chomp[0]
     when 's'
@@ -27,6 +30,8 @@ def run
       else
         # do nothing
       end
+    when 'l'
+      Url.print_links
     when 'q'
       break
     else
